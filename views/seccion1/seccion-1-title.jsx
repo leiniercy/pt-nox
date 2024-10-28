@@ -11,7 +11,7 @@ const Seccion1Title = ({
   return (
     <div
       className={classNames(
-        'relative w-full flex flex-col gap-[8px] items-center justify-center',
+        'relative w-full flex flex-col gap-[8px] items-center justify-center py-6',
         className
       )}
     >

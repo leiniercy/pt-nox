@@ -2,12 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-function CustomButton ({ name, className, add, cancel, action, IconLeft, IconRight, iconSize }) {
+function CustomButton ({ name, className, regular, add, cancel, action, IconLeft, IconRight, iconSize }) {
   return (
     <button
       className={classNames(
         'flex flex-row gap-[6px] h-[48px] p-[12px] items-center justify-center rounded-[8px]',
         'font-sans font-semibold text-[12px] sm:text-[13px] sm2:text-[16px] leading-[24px] tracking-[.5px]',
+        regular && 'bg-transparent text-white',
         add && 'bg-indigo-600 text-white border-[1px] border-solid border-indigo-500',
         cancel && 'bg-blue-gray-700 text-white border-[1px] border-solid border-blue-gray-600',
         className

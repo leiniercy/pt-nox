@@ -1,7 +1,6 @@
 import CustomTitle from '@components/title'
 import { textSeccion2 } from '@config/text-seccion-2'
 import LayoutSeccion from '@layouts/layout-seccion'
-import classNames from 'classnames'
 import React from 'react'
 
 const Seccion2 = ({ className }) => {
