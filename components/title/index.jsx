@@ -13,20 +13,16 @@ const CustomTitle = ({
     <div
       className={classNames(
         'relative w-full flex flex-col gap-[8px] items-center justify-center',
+        'font-roboto font-semibold text-[22px] sm:text-[24px] md:text-[40px] lg:text-[56px] leading-[26.5px] lg:leading-[61.6px] text-center',
         className
       )}
     >
-      <h1
-        className={classNames(
-          'block font-roboto font-semibold text-[16px] sm:text-[18px] sm2:text-[20px] leading-[22px] text-center text-indigo-400',
-          classNameTitle
-        )}
-      >
+      <h1 className={classNames('block text-white', classNameTitle)}>
         {title}
       </h1>
       <h2
         className={classNames(
-          'block font-roboto font-bold text-[40px] sm:text-[46px] sm2:text-[48px] leading-[52.8px] text-center text-white',
+          'block text-indigo-400',
           classNameSubTitle
         )}
       >
