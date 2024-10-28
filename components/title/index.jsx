@@ -20,7 +20,7 @@ const CustomTitle = ({
       <div
         className={classNames(
           'relative w-full flex flex-col gap-[8px] items-center justify-center',
-          'font-roboto font-semibold text-[22px] sm:text-[24px] md:text-[40px] lg:text-[56px] leading-[26.5px] lg:leading-[61.6px] text-center'
+          'font-roboto font-semibold text-[22px] sm:text-[24px] md:text-[40px] lg:text-[56px] leading-[100%] lg:leading-[61.6px] text-center'
         )}
       >
         <h1 className={classNames('block text-white', classNameTitle)}>
