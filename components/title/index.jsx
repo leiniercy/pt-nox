@@ -7,27 +7,34 @@ const CustomTitle = ({
   title,
   classNameTitle,
   subTitle,
-  classNameSubTitle
+  classNameSubTitle,
+  paragraph
 }) => {
   return (
     <div
       className={classNames(
-        'relative w-full flex flex-col gap-[8px] items-center justify-center',
-        'font-roboto font-semibold text-[22px] sm:text-[24px] md:text-[40px] lg:text-[56px] leading-[26.5px] lg:leading-[61.6px] text-center',
+        'relative flex flex-col items-center justify-start gap-[2rem] w-full',
         className
       )}
     >
-      <h1 className={classNames('block text-white', classNameTitle)}>
-        {title}
-      </h1>
-      <h2
+      <div
         className={classNames(
-          'block text-indigo-400',
-          classNameSubTitle
+          'relative w-full flex flex-col gap-[8px] items-center justify-center',
+          'font-roboto font-semibold text-[22px] sm:text-[24px] md:text-[40px] lg:text-[56px] leading-[26.5px] lg:leading-[61.6px] text-center'
         )}
       >
-        {subTitle}
-      </h2>
+        <h1 className={classNames('block text-white', classNameTitle)}>
+          {title}
+        </h1>
+        <h2 className={classNames('block text-indigo-400', classNameSubTitle)}>
+          {subTitle}
+        </h2>
+      </div>
+      {paragraph && (
+        <p className='font-roboto font-normal text-[1rem] leading-[22.4px] text-center text-blue-gray-300'>
+          {paragraph}
+        </p>
+      )}
     </div>
   )
 }
@@ -41,6 +48,10 @@ CustomTitle.propTypes = {
    * Label del sub titulo (campo opcional)
    **/
   subTitle: PropTypes.string,
+  /**
+   * Label del parrafo de la descripcion del titulo (campo opcional)
+   **/
+  paragraph: PropTypes.string,
   /**
    * Nueva informacion css para el contenedor del titulo (campo opcional)
    **/
