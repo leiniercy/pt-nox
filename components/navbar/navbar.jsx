@@ -5,6 +5,7 @@ import MenuItem from '@components/menu/menu-item';
 import { textNavbar } from '@config/text-navbar';
 import CustomButton from '@components/button';
 
+
 const Navbar = ({ className }) => {
     const { isOpen, toggleMenu } = useNavbar();
     const texts = textNavbar;
@@ -18,11 +19,11 @@ const Navbar = ({ className }) => {
                         {texts.title}
                     </h1>
                 </section>
-                
+
                 {/* Hamburguer Menu */}
                 <section className='block lg:hidden'>
-                    <button 
-                        className='p-3 rounded-lg border-[1px] border-transparent bg-[#334155] w-[48px] h-[48px] flex flex-col items-center justify-center gap-[6px]' 
+                    <button
+                        className='p-3 rounded-lg border-[1px] border-transparent bg-[#334155] w-[48px] h-[48px] flex flex-col items-center justify-center gap-[6px]'
                         onClick={toggleMenu}
                     >
                         <div className={`w-6 h-[1px] bg-white rounded-full transition-transform duration-300 ease-in-out ${isOpen ? 'transform rotate-45 h-[2px]' : ''}`}></div>
@@ -43,7 +44,7 @@ const Navbar = ({ className }) => {
                 <section className='hidden lg:flex items-center justify-center gap-3'>
                     <CustomButton
                         className='flex-1 lg:flex-none lg:w-[95px]'
-                        regular                        
+                        regular
                         name={texts.buttonLogIn}
                     />
                     <CustomButton
