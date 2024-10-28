@@ -4,13 +4,14 @@ import { textSeccion1 } from '@config/text-seccion-1'
 import classNames from 'classnames'
 import React from 'react'
 import { Seccion1Figure } from './seccion1-figure'
+import Seccion1Logos from './seccion1-logos'
 
 const Seccion1 = ({ className }) => {
   const texts = textSeccion1
   return (
     <div
       className={classNames(
-        'relative flex flex-col items-center justify-start border-b-[1px] py-[48px] gap-[2rem]',
+        'relative flex flex-col items-center justify-start py-[48px] gap-[2rem] w-full',
         className
       )}
     >
@@ -18,11 +19,12 @@ const Seccion1 = ({ className }) => {
       <p className='font-roboto font-normal text-[1rem] leading-[22.4px] text-center text-blue-gray-300'>
         {textSeccion1.paragraph}
       </p>
-      <div className='relative flex flex-row w-full items-start justify-start gap-[1rem]'>
-        <CustomButton className='flex-1' add name={texts.botonStart} />
-        <CustomButton className='flex-1' cancel name={texts.botonRequest} />
+      <div className='relative flex flex-row w-full items-center justify-center gap-[1rem]'>
+        <CustomButton className='flex-1 md:flex-none md:w-[256px]' add name={texts.botonStart} />
+        <CustomButton className='flex-1 md:flex-none md:w-[256px]' cancel name={texts.botonRequest} />
       </div>
       <Seccion1Figure />
+      <Seccion1Logos />
     </div>
   )
 }
