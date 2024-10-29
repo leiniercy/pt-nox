@@ -40,7 +40,7 @@ const Seccion6 = ({ className }) => {
           <div className='relative flex flex-col items-center justify-start w-full gap-2'>
             <Seccion6Options />
           </div>
-          <CustomButton className='px-8' add name={texts.buttonName} />
+          <CustomButton className='px-8' add name={texts.buttonName} textSize={20} />
         </div>
         <div className='relative inline-block w-full md:flex-1'>
           <Image

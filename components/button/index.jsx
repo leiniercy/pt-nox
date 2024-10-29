@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-function CustomButton ({ name, className, regular, add, cancel, action, IconLeft, IconRight, iconSize }) {
+function CustomButton ({ name, className, regular, add, cancel, action, IconLeft, IconRight, iconSize, textSize }) {
   return (
     <button
       className={classNames(
@@ -16,7 +16,7 @@ function CustomButton ({ name, className, regular, add, cancel, action, IconLeft
       onClick={action}
     >
       {IconLeft && <IconLeft className='h-[16px] w-[16px]' height={16 || iconSize} width={16 || iconSize} color={cancel ? '#261E1B' : '#fff'} />}
-      {name && <span className='font-medium leading-6'>{name}</span>}
+      {name && <span className={`font-roboto font-semibold leading-6 tracking-[0.5px] + text-[${textSize}px] md:text-[20px]`}>{name}</span>}
       {IconRight && <IconRight className='h-[16px] w-[16px]' height={16 || iconSize} width={16 || iconSize} color={cancel ? '#261E1B' : '#fff'} />}
     </button>
   )
