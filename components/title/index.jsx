@@ -3,35 +3,41 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
 const CustomTitle = ({
+  classNameSubContainer,
   className,
   title,
   classNameTitle,
   subTitle,
   classNameSubTitle,
-  paragraph
+  paragraph,
+  classNameParagraph = 'text-center'
 }) => {
   return (
     <div
       className={classNames(
-        'relative flex flex-col items-center justify-start gap-[2rem] w-full',
+        'relative flex flex-col items-center justify-start gap-[2rem] w-[100%]',
         'font-roboto font-semibold text-[22px] sm:text-[24px] md:text-[40px] lg:text-[56px] leading-[100%] lg:leading-[61.6px] text-center',
         className
       )}
     >
       <div
         className={classNames(
-          'relative w-full flex flex-col gap-[8px] items-center justify-center'
+          'relative w-full flex flex-col gap-[8px] items-center justify-center',
+          classNameSubContainer
         )}
       >
-        <h1 className={classNames('block text-white', classNameTitle)}>
+        <h1 className={classNames('blockw w-full text-white', classNameTitle)}>
           {title}
         </h1>
-        <h2 className={classNames('block text-indigo-400', classNameSubTitle)}>
+        <h2 className={classNames('block w-full text-indigo-400', classNameSubTitle)}>
           {subTitle}
         </h2>
       </div>
       {paragraph && (
-        <p className='font-roboto font-normal text-[1rem] leading-[22.4px] text-center text-blue-gray-300'>
+        <p className={classNames(
+          'block font-roboto w-full font-normal text-[1rem] leading-[22.4px] text-blue-gray-300',
+          classNameParagraph
+        )}>
           {paragraph}
         </p>
       )}

@@ -334,7 +334,12 @@ export const IconSearch = ({ color, size, className }) => {
       </g>
       <defs>
         <clipPath id='clip0_671_97'>
-          <rect width='16' height='16' fill='white' transform='translate(12 12.5)' />
+          <rect
+            width='16'
+            height='16'
+            fill='white'
+            transform='translate(12 12.5)'
+          />
         </clipPath>
       </defs>
     </svg>
@@ -373,7 +378,13 @@ export const IconTranslate = ({ color, size, className }) => {
 
 export const IconSettings = ({ color, size, className }) => {
   return (
-    <svg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    <svg
+      width='25'
+      height='25'
+      viewBox='0 0 25 25'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+    >
       <path
         fillRule='evenodd'
         clipRule='evenodd'
@@ -501,7 +512,12 @@ export const IconCalendar = ({ color, size, className }) => {
       </g>
       <defs>
         <clipPath id='clip0_1097_402'>
-          <rect width='14' height='14' fill='white' transform='translate(0.5)' />
+          <rect
+            width='14'
+            height='14'
+            fill='white'
+            transform='translate(0.5)'
+          />
         </clipPath>
       </defs>
     </svg>
@@ -521,6 +537,24 @@ export const IconClose = ({ color, size, className }) => {
       <path
         d='M16 14.6669L20.6669 10L22 11.3331L17.3331 16L22 20.6669L20.6669 22L16 17.3331L11.3331 22L10 20.6669L14.6669 16L10 11.3331L11.3331 10L16 14.6669Z'
         fill={color || '#2D3748'}
+      />
+    </svg>
+  )
+}
+
+export const IconCheck = ({ color, size, className }) => {
+  return (
+    <svg
+      className={className}
+      width={size || '24'}
+      height={size || '25'}
+      viewBox='0 0 24 25'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+    >
+      <path
+        d='M10.4853 17.6975C10.354 17.6978 10.224 17.6722 10.1026 17.622C9.98131 17.5719 9.87108 17.4984 9.77826 17.4055L5.53626 13.1625C5.44068 13.0704 5.36442 12.9601 5.31193 12.8381C5.25944 12.7161 5.23176 12.5849 5.23051 12.4522C5.22927 12.3194 5.25448 12.1877 5.30467 12.0648C5.35486 11.9418 5.42904 11.8301 5.52286 11.7362C5.61669 11.6422 5.72829 11.5679 5.85115 11.5175C5.974 11.4671 6.10566 11.4417 6.23844 11.4428C6.37122 11.4439 6.50246 11.4714 6.6245 11.5237C6.74654 11.576 6.85694 11.6521 6.94926 11.7475L10.4843 15.2825L16.8493 8.91955C17.0368 8.7319 17.2911 8.62644 17.5564 8.62634C17.8217 8.62625 18.0761 8.73154 18.2638 8.91905C18.4514 9.10655 18.5569 9.36092 18.557 9.62619C18.5571 9.89146 18.4518 10.1459 18.2643 10.3335L11.1923 17.4055C11.0994 17.4984 10.9892 17.5719 10.8679 17.622C10.7465 17.6722 10.6165 17.6978 10.4853 17.6975Z'
+        fill={color || '#818CF8'}
       />
     </svg>
   )

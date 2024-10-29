@@ -8,18 +8,18 @@ import useScreenWatcher from '@hooks/use-screen-observer'
 
 const Seccion3 = ({ className }) => {
   const texts = textSeccion3
-  const isDesktop = useScreenWatcher(1024)
+  const isDesktop = useScreenWatcher(1023)
 
   return (
     <LayoutSeccion className={className}>
       <div className='flex flex-row flex-wrap md:flex-nowrap gap-8 items-start justify-start md:items-center md:justify-center w-full'>
         <CustomTitle
-          className='md:flex-1 lg:text-[48px] lg:leading-[52.8px]'
+          className='md:flex-1 md:text-[32px] md:leading-[100%] lg:text-[48px] lg:leading-[52.8px]'
           title={texts.title}
           subTitle={textSeccion3.subTitle}
           paragraph={!isDesktop.Bigger ? texts.paragraph : texts.paragraphBigger}
         />
-        <div className='relative  max-h-[112px] md:max-h-[600px] md:flex-1 flex flex-col gap-4 items-start justify-start'>
+        <div className='relative  sm2:max-h-[112px] md:max-h-[600px] md:flex-1 flex flex-col gap-4 items-start justify-start'>
           <div className='relative flex-1 w-full md:w-auto grid grid-cols-2 gap-2 sm:gap-3 sm2:gap-4 items-start'>
             <div className='realtive h-full w-full flex items-center justify-end'>
               <Image
