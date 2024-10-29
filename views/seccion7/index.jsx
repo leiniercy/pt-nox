@@ -27,7 +27,8 @@ const Seccion7 = ({ className }) => {
                             src="/assets/images/seccion7/picture-0.svg"
                             width={608}
                             height={277}
-                            alt="graph-img w-[320px] h-[228px] md:w-[608px] md:h-[277px]"
+                            alt="graph-img"
+                            className='w-[320px] h-[228px] md:w-[608px] md:h-[277px]'
                         />
                     </div>
                 </section>
