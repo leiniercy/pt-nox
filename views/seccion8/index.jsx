@@ -32,7 +32,8 @@ const Seccion8 = ({ className }) => {
                         src="/assets/images/seccion8/picture-0.jfif"
                         width={680}
                         height={480}
-                        alt="graph-img w-[280px] h-[266px] md:w-[680px] md:h-[480px]"
+                        alt="graph-img"
+                        className='w-[280px] h-[266px] md:w-[680px] md:h-[480px] rounded-tl-[20px]'
                     />
                 </div>
 
