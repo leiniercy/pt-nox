@@ -15,6 +15,7 @@ module.exports = {
         'indigo-500': '#6366F1',
         'indigo-600': '#4F46E5',
         'indigo-900': '#312E81',
+        'blue-gray-200': '#E2E8F0',
         'blue-gray-300': '#CBD5E1',
         'blue-gray-400': '#94A3B8',
         'blue-gray-600': '#475569',
