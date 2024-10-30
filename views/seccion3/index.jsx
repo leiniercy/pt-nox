@@ -17,10 +17,17 @@ const Seccion3 = ({ className }) => {
           className='md:flex-1 md:text-[32px] md:leading-[100%] lg:text-[48px] lg:leading-[52.8px]'
           title={texts.title}
           subTitle={textSeccion3.subTitle}
-          paragraph={!isDesktop.Bigger ? texts.paragraph : texts.paragraphBigger}
+          paragraph={
+            !isDesktop.Bigger ? texts.paragraph : texts.paragraphBigger
+          }
         />
         <div className='relative  sm2:max-h-[112px] md:max-h-[600px] md:flex-1 flex flex-col gap-4 items-start justify-start'>
-          <div className='relative flex-1 w-full md:w-auto grid grid-cols-2 gap-2 sm:gap-3 sm2:gap-4 items-start'>
+          <div
+            data-aos='fade-left'
+            data-aos-easing='linear'
+            data-aos-duration='1000'
+            className='relative flex-1 w-full md:w-auto grid grid-cols-2 gap-2 sm:gap-3 sm2:gap-4 items-start'
+          >
             <div className='realtive h-full w-full flex items-center justify-end'>
               <Image
                 className='col-span-1 h-full w-full object-fill'
@@ -42,7 +49,12 @@ const Seccion3 = ({ className }) => {
               />
             </div>
           </div>
-          <div className='relative flex-1 w-full grid grid-cols-2 gap-2 sm:gap-3 sm2:gap-4 items-start'>
+          <div
+            data-aos='fade-left'
+            data-aos-easing='linear'
+            data-aos-duration='1000'
+            className='relative flex-1 w-full grid grid-cols-2 gap-2 sm:gap-3 sm2:gap-4 items-start'
+          >
             <div className='realtive h-full w-full flex items-center justify-start'>
               <Image
                 className='col-span-1 h-full w-full object-fill'

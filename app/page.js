@@ -1,3 +1,4 @@
+'use client'
 import Navbar from '@components/navbar/navbar'
 import Seccion1 from '@views/seccion1'
 import Seccion2 from '@views/seccion2'
@@ -11,7 +12,19 @@ import Seccion8 from '@views/seccion8'
 import Seccion10 from '@views/seccion10'
 import CustomFooter from '@views/footer'
 
+// css on scroll
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import { useEffect } from 'react'
+
 export default function Home () {
+  useEffect(() => {
+    AOS.init({
+      delay: 1, // values from 0 to 3000, with step 50ms
+      duration: 1500 // values from 0 to 3000, with step 50ms
+    })
+  }, [])
+
   return (
     <>
       <Navbar />
@@ -23,8 +36,8 @@ export default function Home () {
         <Seccion5 className='col-span-3 md:col-start-2 md:col-span-10 py-6 px-4' />
         <Seccion6 className='col-span-3 md:col-start-2 md:col-span-10 py-6 px-4' />
         <Seccion7 className='col-span-3 md:col-start-0 md:col-span-12 py-6 px-4' />
-        <Seccion8 className='col-span-3 md:col-start-0 md:col-span-12 px-4' />
-        <Seccion9 className='col-span-3 md:col-start-2 md:col-span-10 px-4' />
+        <Seccion8 className='col-span-3 md:col-start-0 md:col-span-12 pt-6 px-4' />
+        <Seccion9 className='col-span-3 md:col-start-2 md:col-span-10 py-6 px-4' />
         <Seccion10 className='col-span-3 md:col-start-2 md:col-span-10 py-6 px-4' />
         <CustomFooter className='col-span-3 md:col-start-0 md:col-span-12 py-6 px-4' />
       </main>

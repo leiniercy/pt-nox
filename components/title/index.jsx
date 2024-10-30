@@ -14,6 +14,9 @@ const CustomTitle = ({
 }) => {
   return (
     <div
+      data-aos='fade-up'
+      data-aos-easing='linear'
+      data-aos-duration='1000'
       className={classNames(
         'relative flex flex-col items-center justify-start gap-[2rem] w-[100%]',
         'font-roboto font-semibold text-[22px] sm:text-[24px] md:text-[40px] lg:text-[56px] leading-[100%] lg:leading-[61.6px] text-center',
@@ -29,15 +32,22 @@ const CustomTitle = ({
         <h1 className={classNames('blockw w-full text-white', classNameTitle)}>
           {title}
         </h1>
-        <h2 className={classNames('block w-full text-indigo-400', classNameSubTitle)}>
+        <h2
+          className={classNames(
+            'block w-full text-indigo-400',
+            classNameSubTitle
+          )}
+        >
           {subTitle}
         </h2>
       </div>
       {paragraph && (
-        <p className={classNames(
-          'block font-roboto w-full font-normal text-[1rem] leading-[22.4px] text-blue-gray-300',
-          classNameParagraph
-        )}>
+        <p
+          className={classNames(
+            'block font-roboto w-full font-normal text-[1rem] leading-[22.4px] text-blue-gray-300',
+            classNameParagraph
+          )}
+        >
           {paragraph}
         </p>
       )}

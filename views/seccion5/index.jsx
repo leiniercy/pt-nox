@@ -28,7 +28,12 @@ const Seccion5 = ({ className }) => {
   return (
     <LayoutSeccion className={className}>
       <div className='relative w-full flex flex-col gap-8 items-start justify-start md:flex-row md:items-center'>
-        <div className='relative w-full flex flex-col gap-8 items-start justify-start md:flex-1 md:order-2'>
+        <div
+          data-aos='fade-up'
+          data-aos-easing='linear'
+          data-aos-duration='1000'
+          className='relative w-full flex flex-col gap-8 items-start justify-start md:flex-1 md:order-2'
+        >
           <CustomTitle
             classNameTitle='text-left text-[22px] sm:text-[24px] md:text-[32px] lg:text-[48px]'
             classNameSubTitle='text-left text-[22px] sm:text-[24px] md:text-[32px] lg:text-[48px]'
@@ -40,9 +45,19 @@ const Seccion5 = ({ className }) => {
           <div className='relative flex flex-col items-center justify-start w-full gap-2'>
             <Seccion5Options />
           </div>
-          <CustomButton className='px-8' add name={texts.buttonName} textSize={20}/>
+          <CustomButton
+            className='px-8'
+            add
+            name={texts.buttonName}
+            textSize={20}
+          />
         </div>
-        <div className='relative felx flex-col items-start justify-start w-full gap-2 md:flex-1 md:order-1 max-h-[600px]'>
+        <div
+          data-aos='fade-right'
+          data-aos-easing='linear'
+          data-aos-duration='1000'
+          className='relative felx flex-col items-start justify-start w-full gap-2 md:flex-1 md:order-1 max-h-[600px]'
+        >
           <div className='relative flex-1 w-full grid grid-cols-2 gap-2 sm:gap-3 sm2:gap-4 items-start'>
             <div className='realtive col-span-2 h-auto lg:h-[288px] w-full flex items-center justify-start'>
               <Image

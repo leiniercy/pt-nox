@@ -7,7 +7,11 @@ const Seccion2 = ({ className }) => {
   const texts = textSeccion2
   return (
     <LayoutSeccion className={className}>
-      <CustomTitle title={texts.title} subTitle={texts.subTitle} paragraph={texts.paragraph} />
+      <CustomTitle
+        title={texts.title}
+        subTitle={texts.subTitle}
+        paragraph={texts.paragraph}
+      />
     </LayoutSeccion>
   )
 }
