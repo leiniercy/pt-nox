@@ -137,7 +137,7 @@ const Seccion9Swiper = () => {
                   <h1 className='text-white text-[16px] sm:text-[17px] sm2:text-[18px] font-roboto font-normal leading-[28.8px] text-left'>
                     {comment.name}
                   </h1>
-                  <label className='text-blue-gray-600 text-[16px] sm:text-[17px] sm2:text-[18px] font-roboto font-normal leading-[22.4px] text-left'>
+                  <label className='text-blue-gray-400 text-[16px] sm:text-[17px] sm2:text-[18px] font-roboto font-normal leading-[22.4px] text-left'>
                     {comment.role}
                   </label>
                 </div>
