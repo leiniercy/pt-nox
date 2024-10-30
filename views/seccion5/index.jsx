@@ -40,7 +40,7 @@ const Seccion5 = ({ className }) => {
           <div className='relative flex flex-col items-center justify-start w-full gap-2'>
             <Seccion5Options />
           </div>
-          <CustomButton className='px-8' add name={texts.buttonName} />
+          <CustomButton className='px-8' add name={texts.buttonName} textSize={20}/>
         </div>
         <div className='relative felx flex-col items-start justify-start w-full gap-2 md:flex-1 md:order-1 max-h-[600px]'>
           <div className='relative flex-1 w-full grid grid-cols-2 gap-2 sm:gap-3 sm2:gap-4 items-start'>
