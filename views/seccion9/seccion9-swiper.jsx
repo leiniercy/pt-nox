@@ -19,6 +19,34 @@ import Image from 'next/image'
 import { IconArrowLeft, IconArrowRigth } from '@components/icons/custom-icons'
 
 const Seccion9Swiper = () => {
+  const buttonRef = useRef(null) // Referencia para los botones
+  // Estado para manejar el botón activo
+  const [activeButton, setActiveButton] = useState(null)
+
+  const handlePrevClick = () => {
+    setActiveButton('prev')
+    // Aquí puedes agregar la lógica para navegar al slide anterior
+  }
+
+  const handleNextClick = () => {
+    setActiveButton('next')
+    // Aquí puedes agregar la lógica para navegar al slide siguiente
+  }
+
+  // Manejar clics fuera de los botones
+  const handleClickOutside = event => {
+    if (buttonRef.current && !buttonRef.current.contains(event.target)) {
+      setActiveButton(null) // Restablecer el estado si se hace clic fuera
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [])
+
   const isMount = useRef(false)
   const nombres = [
     { name: 'Ana', role: 'Manager' },
@@ -28,7 +56,7 @@ const Seccion9Swiper = () => {
     { name: 'Sofía', role: 'Product Owner' },
     { name: 'Carlos', role: 'DevOps' },
     { name: 'Lucía', role: 'Business Analyst' },
-    { name: 'Diego', role: 'System Administrator' },
+    { name: 'Diego', role: 'Administrator' },
     { name: 'Valentina', role: 'UX Researcher' },
     { name: 'Andrés', role: 'Data Scientist' }
   ]
@@ -119,19 +147,34 @@ const Seccion9Swiper = () => {
         )
       })}
       {/* Paginacion */}
-      <div className='slider-controller relative w-[100%] flex flex-row gap-[1rem] items-center justify-center'>
-        <button className='button-prev relative h-[48px] flex items-center justify-center gap-[8px] rounded-[8px] z-[200] pt-[12px] px-[8px]'>
-          <IconArrowLeft color='#fff' />
-          <label className='font-roboto font-medium text-[16px] leading-[24px] tracking-[.5px] text-white'>
+      <div ref={buttonRef} className='slider-controller relative w-[100%] flex flex-row gap-[1rem] items-center justify-center'>
+        <button
+          className='button-prev relative h-[48px] flex items-center justify-center gap-[8px] rounded-[8px] z-[200] pt-[12px] px-[8px]'
+          onClick={handlePrevClick}
+        >
+          <IconArrowLeft color={activeButton === 'prev' ? '#4F46E5' : '#fff'} />
+          <label
+            className={`font-roboto font-medium text-[16px] leading-[24px] tracking-[.5px] ${
+              activeButton === 'prev' ? 'text-indigo-600' : 'text-white'
+            }`}
+          >
             Prev
           </label>
         </button>
-        {/* <div className='swiper-pagination relative w-auto bottom-0 top-0 left-0 flex flex-row gap-[0.3rem] items-center justify-center'></div> */}
-        <button className='button-next relative h-[48px] flex items-center justify-center gap-[8px] rounded-[8px] z-[200] pt-[12px] px-[8px]'>
-          <label className='font-roboto font-medium text-[16px] leading-[24px] tracking-[.5px] text-white'>
+        <button
+          className='button-next relative h-[48px] flex items-center justify-center gap-[8px] rounded-[8px] z-[200] pt-[12px] px-[8px]'
+          onClick={handleNextClick}
+        >
+          <label
+            className={`font-roboto font-medium text-[16px] leading-[24px] tracking-[.5px] ${
+              activeButton === 'next' ? 'text-indigo-600' : 'text-white'
+            }`}
+          >
             Next
           </label>
-          <IconArrowRigth color='#fff' />
+          <IconArrowRigth
+            color={activeButton === 'next' ? '#4F46E5' : '#fff'}
+          />
         </button>
       </div>
     </Swiper>

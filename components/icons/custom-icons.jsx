@@ -473,7 +473,7 @@ export const IconArrowRigth = ({ color, size, className }) => {
       />
       <path
         d='M19 12.1406L13 18.1406M6.5 12.1406H19H6.5ZM19 12.1406L13 6.14062L19 12.1406Z'
-        stroke='white'
+        stroke={color || 'white'}
         strokeWidth='1.5'
         strokeLinecap='round'
         strokeLinejoin='round'
