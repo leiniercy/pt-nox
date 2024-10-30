@@ -19,13 +19,13 @@ const Seccion1 = ({ className }) => {
           className='flex-1 md:flex-none md:w-[256px]'
           add
           name={texts.botonStart}
-          textSize={16}
+          textSize={12}
         />
         <CustomButton
           className='flex-1 md:flex-none md:w-[256px]'
           cancel
           name={texts.botonRequest}
-          textSize={16}
+          textSize={12}
         />
       </div>
       <Seccion1Figure />

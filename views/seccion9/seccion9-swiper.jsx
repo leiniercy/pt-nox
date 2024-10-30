@@ -76,7 +76,7 @@ const Seccion9Swiper = () => {
       image: nombres[index].img,
       companie: selectCompanyRandom()
     }))
-  }, [info])
+  }, [info, nombres])
 
   const handleSlideChange = swiper => {
     setActiveButton(null)
@@ -87,13 +87,12 @@ const Seccion9Swiper = () => {
       data-aos='fade-up'
       data-aos-easing='linear'
       data-aos-duration='1000'
-      className='relative w-screen'
+      className='relative h-[500px] w-screen'
     >
       <Swiper
         loop={true}
         slidesPerView={5}
         centeredSlides={true}
-        spaceBetween={20}
         navigation={{
           nextEl: '.button-next',
           prevEl: '.button-prev'
