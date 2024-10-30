@@ -14,14 +14,23 @@ const Seccion9Swiper = () => {
   const [activeButton, setActiveButton] = useState(null)
   const [info, setInfo] = useState([])
 
+  const selectCompanyRandom = () => {
+    return companies[Math.floor(Math.random() * companies.length)]
+  }
+
   const nombres = [
-    { name: 'Ana', role: 'Manager', img: 'assets/images/seccion9/ana.svg' },
+    { name: 'Ana',
+      role: 'Manager',
+      img: 'assets/images/seccion9/ana.svg'
+    },
     {
       name: 'Luis',
       role: 'Developer',
-      img: 'assets/images/seccion9/carlos.svg'
+      img: 'assets/images/seccion9/carlos.svg'      
     },
-    { name: 'María', role: 'Designer', img: 'assets/images/seccion9/ana.svg' },
+    { name: 'María',
+      role: 'Designer',
+      img: 'assets/images/seccion9/ana.svg' },
     {
       name: 'Javier',
       role: 'Tester',
@@ -57,11 +66,7 @@ const Seccion9Swiper = () => {
       role: 'Data Scientist',
       img: 'assets/images/seccion9/carlos.svg'
     }
-  ]
-
-  const selectCompanyRandom = () => {
-    return companies[Math.floor(Math.random() * companies.length)]
-  }
+  ]  
 
   useEffect(() => {
     fetchJsonplaceholder().then(data => setInfo(data))
@@ -76,7 +81,7 @@ const Seccion9Swiper = () => {
       image: nombres[index].img,
       companie: selectCompanyRandom()
     }))
-  }, [info, nombres])
+  }, [info])
 
   const handleSlideChange = swiper => {
     setActiveButton(null)
