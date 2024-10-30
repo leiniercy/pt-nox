@@ -8,29 +8,30 @@ import {
 } from './seccion1-figure'
 import { textSeccion1 } from '@config/text-seccion-1'
 
+export const companies = [
+  {
+    name: 'SmarFinder',
+    Icon: IconSmartFinder
+  },
+  {
+    name: 'Zoomerr',
+    Icon: IconZoomerr
+  },
+  {
+    name: 'SHELLS',
+    Icon: IconShells
+  },
+  {
+    name: 'WAVES',
+    Icon: IconWaves
+  },
+  {
+    name: 'ArtVenue',
+    Icon: IconArtVenue
+  }
+]
+
 const Seccion1Logos = () => {
-  const companies = [
-    {
-      name: 'SmarFinder',
-      Icon: IconSmartFinder
-    },
-    {
-      name: 'Zoomerr',
-      Icon: IconZoomerr
-    },
-    {
-      name: 'SHELLS',
-      Icon: IconShells
-    },
-    {
-        name: 'WAVES',
-        Icon: IconWaves
-      },
-    {
-      name: 'ArtVenue',
-      Icon: IconArtVenue
-    }
-  ]
   const texts = textSeccion1
   return (
     <div className='relative w-full flex flex-col justify-center items center gap-8 py-16 px-4'>
