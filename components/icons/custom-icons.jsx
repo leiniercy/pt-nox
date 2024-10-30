@@ -278,21 +278,37 @@ export const IconCar = ({ color, size, className }) => {
   )
 }
 
-export const IconChevRonRight = ({ color, size, className }) => {
+export const IconChevronLeft = ({ className, size, color }) => {
   return (
     <svg
-      className={className}
-      width={size || '24'}
-      height={size || '24'}
-      viewBox='0 0 24 24'
+      className={className || ''}
+      width={size || '32'}
+      height={size || '32'}
+      viewBox='0 0 32 32'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
     >
       <path
-        fillRule='evenodd'
-        clipRule='evenodd'
-        d='M8.29289 5.29289C8.68342 4.90237 9.31658 4.90237 9.70711 5.29289L15.7071 11.2929C16.0976 11.6834 16.0976 12.3166 15.7071 12.7071L9.70711 18.7071C9.31658 19.0976 8.68342 19.0976 8.29289 18.7071C7.90237 18.3166 7.90237 17.6834 8.29289 17.2929L13.5858 12L8.29289 6.70711C7.90237 6.31658 7.90237 5.68342 8.29289 5.29289Z'
-        fill={color || '#A0AEC0'}
+        d='M18.5853 6.58534L9.172 16L18.5853 25.4147L21.4147 22.5853L14.828 16L21.4147 9.41468L18.5853 6.58534Z'
+        fill={color || 'white'}
+      />
+    </svg>
+  )
+}
+
+export const IconChevronRight = ({ className, size, color }) => {
+  return (
+    <svg
+      className={className || ''}
+      width={size || '32'}
+      height={size || '32'}
+      viewBox='0 0 32 32'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+    >
+      <path
+        d='M13.4147 25.4147L22.828 16L13.4147 6.58534L10.5853 9.41468L17.172 16L10.5853 22.5853L13.4147 25.4147Z'
+        fill={color || 'white'}
       />
     </svg>
   )
@@ -445,21 +461,22 @@ export const IconArrowRigth = ({ color, size, className }) => {
   return (
     <svg
       className={className}
-      width={size || '24'}
-      height={size || '24'}
-      viewBox='0 0 24 24'
+      width={size || '25'}
+      height={size || '25'}
+      viewBox='0 0 25 25'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
     >
       <path
-        d='M6.5 12H18.5H6.5ZM18.5 12L14.5 8L18.5 12ZM18.5 12L14.5 16L18.5 12Z'
-        fill={color || '#FF7500'}
+        d='M6.5 12.1406H19H6.5ZM19 12.1406L13 6.14062L19 12.1406ZM19 12.1406L13 18.1406L19 12.1406Z'
+        fill={color || 'white'}
       />
       <path
-        d='M6.5 12H18.5M18.5 12L14.5 8M18.5 12L14.5 16'
-        stroke={color || '#FF7500'}
-        strokeWidth='1.25'
+        d='M19 12.1406L13 18.1406M6.5 12.1406H19H6.5ZM19 12.1406L13 6.14062L19 12.1406Z'
+        stroke='white'
+        strokeWidth='1.5'
         strokeLinecap='round'
+        strokeLinejoin='round'
       />
     </svg>
   )
@@ -469,23 +486,15 @@ export const IconArrowLeft = ({ color, size, className }) => {
   return (
     <svg
       className={className}
-      width={size || '24'}
-      height={size || '24'}
-      viewBox='0 0 24 24'
+      width={size || '25'}
+      height={size || '25'}
+      viewBox='0 0 25 25'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
     >
       <path
-        d='M18.5 12H6.5H18.5ZM6.5 12L10.5 8L6.5 12ZM6.5 12L10.5 16L6.5 12Z'
-        fill={color || '#FF7500'}
-        fillOpacity='0.5'
-      />
-      <path
-        d='M18.5 12H6.5M6.5 12L10.5 8M6.5 12L10.5 16'
-        stroke={color || '#FF7500'}
-        strokeWidth='1.25'
-        strokeLinecap='round'
-        strokeOpacity='0.5'
+        d='M8.91308 12.7977L12.8631 16.7477C13.0407 16.9372 13.1377 17.1883 13.1335 17.448C13.1293 17.7077 13.0242 17.9555 12.8405 18.1391C12.6568 18.3227 12.4088 18.4276 12.1492 18.4316C11.8895 18.4357 11.6384 18.3385 11.4491 18.1607L5.79208 12.5047C5.6989 12.4121 5.62495 12.3019 5.57449 12.1806C5.52402 12.0592 5.49805 11.9291 5.49805 11.7977C5.49805 11.6663 5.52402 11.5362 5.57449 11.4149C5.62495 11.2935 5.6989 11.1834 5.79208 11.0907L11.4491 5.43371C11.5413 5.3382 11.6517 5.26201 11.7737 5.2096C11.8957 5.1572 12.0269 5.12961 12.1597 5.12846C12.2925 5.1273 12.4241 5.1526 12.547 5.20288C12.6699 5.25317 12.7816 5.32742 12.8755 5.42131C12.9694 5.5152 13.0436 5.62686 13.0939 5.74975C13.1442 5.87265 13.1695 6.00433 13.1683 6.13711C13.1672 6.26989 13.1396 6.40111 13.0872 6.52311C13.0348 6.64511 12.9586 6.75546 12.8631 6.84771L8.91308 10.7977H18.4991C18.7643 10.7977 19.0187 10.9031 19.2062 11.0906C19.3937 11.2781 19.4991 11.5325 19.4991 11.7977C19.4991 12.0629 19.3937 12.3173 19.2062 12.5048C19.0187 12.6923 18.7643 12.7977 18.4991 12.7977H8.91308Z'
+        fill={color || 'white'}
       />
     </svg>
   )
