@@ -9,7 +9,7 @@ const Seccion9 = ({ className }) => {
   return (
     <LayoutSeccion className={className}>
       <CustomTitle
-        className='md:text-[32px] md:leading-[100%] lg:text-[48px] lg:leading-[52.8px]'
+        className='px-4 md:text-[32px] md:leading-[100%] lg:text-[48px] lg:leading-[52.8px]'
         title={texts.title}
         subTitle={texts.subTitle}
         paragraph={texts.paragraph}
