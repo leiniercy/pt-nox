@@ -4,7 +4,7 @@ import useNavbar from '@hooks/use-navbar/useNavbar';
 import MenuItem from '@components/menu/menu-item';
 import { textNavbar } from '@config/text-navbar';
 import CustomButton from '@components/button';
-
+import MobileSidebar from '@components/sidebar/sidebar';
 
 const Navbar = ({ className }) => {
     const { isOpen, toggleMenu } = useNavbar();
@@ -53,7 +53,10 @@ const Navbar = ({ className }) => {
                         name={texts.buttonRequest}
                     />
                 </section>
-            </header>            
+            </header>
+
+            {/* Mobile Sidebar */}
+            <MobileSidebar isOpen={isOpen} />
         </>
     );
 }
